@@ -10,9 +10,6 @@ function Landing() {
         <section className="bg-gradient-to-br from-emerald-50 via-white to-green-50">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
             <div>
-              <span className="inline-block rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
-                Wujudkan impianmu
-              </span>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
                 Barang impian,
@@ -60,9 +57,6 @@ function Landing() {
                   </h2>
                 </div>
 
-                <span className="rounded-xl bg-emerald-100 p-3 text-2xl">
-                  🎯
-                </span>
               </div>
 
               <div className="mt-8 rounded-2xl bg-emerald-50 p-5">
@@ -112,9 +106,6 @@ function Landing() {
                 </div>
               </div>
 
-              <p className="mt-4 text-xs text-slate-400">
-                * Ilustrasi tampilan, bukan data tabungan sungguhan.
-              </p>
             </div>
           </div>
         </section>
@@ -183,11 +174,6 @@ function Landing() {
             <h2 className="text-3xl font-bold text-white">
               Satu langkah kecil menuju impianmu.
             </h2>
-
-            <p className="mx-auto mt-4 max-w-xl leading-7 text-emerald-100">
-              Mulai tentukan target dan buat rencana menabung yang
-              sesuai dengan kemampuanmu.
-            </p>
 
             <a
               href="/register"
