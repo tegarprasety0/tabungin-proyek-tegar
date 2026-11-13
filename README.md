@@ -1,16 +1,117 @@
-# React + Vite
+# Tabungin
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplikasi web pencatatan tabungan yang membantu pengguna merencanakan
+target keuangan, mencatat pemasukan dan penarikan tabungan, serta
+memantau perkembangan tabungan.
 
-Currently, two official plugins are available:
+> **Status pengembangan:** Dalam proses pengerjaan. Beberapa fitur masih
+> direncanakan atau perlu diuji lebih lanjut.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Daftar Isi
 
-## React Compiler
+-   [Tentang Proyek](#tentang-proyek)
+-   [Fitur](#fitur)
+-   [Teknologi](#teknologi)
+-   [Struktur Proyek](#struktur-proyek)
+-   [Persyaratan](#persyaratan)
+-   [Instalasi dan Menjalankan
+    Proyek](#instalasi-dan-menjalankan-proyek)
+-   [Konfigurasi Supabase](#konfigurasi-supabase)
+-   [Database](#database)
+-   [Alur Kerja Git](#alur-kerja-git)
+-   [Rencana Pengembangan](#rencana-pengembangan)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tentang Proyek
 
-## Expanding the Oxlint configuration
+Tabungin dikembangkan sebagai aplikasi web untuk membantu pengguna,
+khususnya mahasiswa, mengelola tabungan secara lebih terarah.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Pengguna dapat membuat target tabungan berdasarkan barang atau kebutuhan
+yang ingin dibeli. Setiap target dapat dilengkapi nominal yang ingin
+dicapai dan kategori. Pengguna juga dapat mencatat transaksi deposit
+maupun penarikan sehingga saldo dan perkembangan target dapat dipantau.
+
+## Fitur
+
+### Fitur yang sudah diimplementasikan
+
+-   Registrasi dan login menggunakan Supabase Authentication.
+-   Pemulihan sesi autentikasi.
+-   Logout.
+-   Proteksi halaman yang hanya dapat diakses setelah login.
+-   Pengalihan pengguna yang sudah login dari halaman login dan
+    registrasi.
+-   Membuat, melihat, mengubah, dan menghapus target tabungan.
+-   Memilih kategori untuk target tabungan.
+-   Mencatat transaksi deposit dan penarikan.
+-   Mengubah dan menghapus transaksi.
+-   Menampilkan riwayat transaksi.
+-   Menghitung saldo target berdasarkan transaksi.
+-   Validasi agar penarikan tidak membuat saldo menjadi negatif.
+-   Row Level Security (RLS) dasar untuk membatasi akses data pengguna.
+
+**Catatan:** Fitur transaksi dan riwayat transaksi sudah diintegrasikan
+ke Dashboard, tetapi tetap perlu diuji menyeluruh pada lingkungan
+aplikasi.
+
+### Fitur yang direncanakan
+
+-   Kalkulator kebutuhan tabungan harian.
+-   Pencarian target tabungan.
+-   Filter berdasarkan kategori.
+-   Pengurutan target tabungan.
+-   Dashboard dan pengelolaan khusus Admin.
+-   Penyempurnaan CRUD profil dan kategori.
+-   Pengujian keamanan dan hak akses untuk seluruh role.
+
+## Teknologi
+
+  Teknologi               Kegunaan
+  ----------------------- -----------------------------------------------
+  React                   Membangun antarmuka pengguna
+  Vite                    Development server dan build tool
+  Tailwind CSS            Styling antarmuka
+  Supabase                Backend, database PostgreSQL, dan autentikasi
+  React Router DOM        Navigasi dan routing
+  React Hook Form         Pengelolaan form
+  Zod                     Validasi data form
+  `@hookform/resolvers`   Integrasi React Hook Form dengan Zod
+
+## Struktur Proyek
+
+Struktur utama yang digunakan saat ini:
+
+``` text
+final-project-tegar/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── GoalCard.jsx
+│   │   ├── GoalForm.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── PublicOnlyRoute.jsx
+│   │   ├── TransactionForm.jsx
+│   │   └── TransactionHistory.jsx
+│   ├── lib/
+│   │   ├── AuthContext.jsx
+│   │   └── supabaseClient.js
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Landing.jsx
+│   │   ├── Login.jsx
+│   │   ├── NotFound.jsx
+│   │   └── Register.jsx
+│   ├── schemas/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── supabase/
+│   └── migrations/
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+> Struktur dapat berubah mengikuti perkembangan implementasi. Sesuaikan
+> daftar file di atas jika ada perubahan pada direktori proyek.
