@@ -4,6 +4,8 @@ Aplikasi web pencatatan tabungan yang membantu pengguna merencanakan
 target keuangan, mencatat pemasukan dan penarikan tabungan, serta
 memantau perkembangan tabungan.
 
+🔗 **Live Demo:** [https://tabungin-web-nu.vercel.app](https://tabungin-web-nu.vercel.app)
+
 > **Status pengembangan:** Dalam proses pengerjaan. Beberapa fitur masih
 > direncanakan atau perlu diuji lebih lanjut.
 
@@ -13,6 +15,7 @@ memantau perkembangan tabungan.
 -   [Fitur](#fitur)
 -   [Teknologi](#teknologi)
 -   [Struktur Proyek](#struktur-proyek)
+-   [Demo](#demo)
 
 ## Tentang Proyek
 
@@ -23,6 +26,12 @@ Pengguna dapat membuat target tabungan berdasarkan barang atau kebutuhan
 yang ingin dibeli. Setiap target dapat dilengkapi nominal yang ingin
 dicapai dan kategori. Pengguna juga dapat mencatat transaksi deposit
 maupun penarikan sehingga saldo dan perkembangan target dapat dipantau.
+
+## Demo
+
+Aplikasi dapat diakses secara publik melalui:
+
+**https://tabungin-web-nu.vercel.app**
 
 ## Fitur
 
@@ -104,7 +113,3 @@ final-project-tegar/
 ├── .gitignore
 ├── package.json
 └── README.md
-```
-
-> Struktur dapat berubah mengikuti perkembangan implementasi. Sesuaikan
-> daftar file di atas jika ada perubahan pada direktori proyek.
