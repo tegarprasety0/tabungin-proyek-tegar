@@ -13,13 +13,6 @@ memantau perkembangan tabungan.
 -   [Fitur](#fitur)
 -   [Teknologi](#teknologi)
 -   [Struktur Proyek](#struktur-proyek)
--   [Persyaratan](#persyaratan)
--   [Instalasi dan Menjalankan
-    Proyek](#instalasi-dan-menjalankan-proyek)
--   [Konfigurasi Supabase](#konfigurasi-supabase)
--   [Database](#database)
--   [Alur Kerja Git](#alur-kerja-git)
--   [Rencana Pengembangan](#rencana-pengembangan)
 
 ## Tentang Proyek
 
