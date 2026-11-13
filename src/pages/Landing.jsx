@@ -27,14 +27,14 @@ function Landing() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="/register"
-                  className="rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700"
+                  className="bg-emerald-600 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700"
                 >
                   Mulai Menabung Gratis →
                 </a>
 
                 <a
                   href="#fitur"
-                  className="rounded-xl border border-slate-200 px-6 py-3 font-semibold text-slate-700 transition hover:bg-slate-50"
+                  className="border border-slate-200 px-6 py-3 font-semibold text-slate-700 transition hover:bg-slate-50"
                 >
                   Pelajari Fitur
                 </a>
@@ -46,7 +46,7 @@ function Landing() {
             </div>
 
             {/* Preview target tabungan */}
-            <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-xl shadow-emerald-900/5 sm:p-8">
+            <div className="border border-emerald-100 bg-white p-6 shadow-xl shadow-emerald-900/5 sm:p-8">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-slate-500">
@@ -59,7 +59,7 @@ function Landing() {
 
               </div>
 
-              <div className="mt-8 rounded-2xl bg-emerald-50 p-5">
+              <div className="mt-8 bg-emerald-50 p-5">
                 <p className="text-sm text-emerald-800">
                   Headphone impian
                 </p>
@@ -72,8 +72,8 @@ function Landing() {
                   dari target Rp1.000.000
                 </p>
 
-                <div className="mt-5 h-3 overflow-hidden rounded-full bg-emerald-100">
-                  <div className="h-full w-3/5 rounded-full bg-emerald-500" />
+                <div className="mt-5 h-3 overflow-hidden bg-emerald-100">
+                  <div className="h-full w-3/5 bg-emerald-500" />
                 </div>
 
                 <div className="mt-3 flex justify-between text-sm">
@@ -87,7 +87,7 @@ function Landing() {
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-4">
-                <div className="rounded-xl border border-slate-100 p-4">
+                <div className="border border-slate-100 p-4">
                   <p className="text-sm text-slate-500">
                     Sudah terkumpul
                   </p>
@@ -96,7 +96,7 @@ function Landing() {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-slate-100 p-4">
+                <div className="border border-slate-100 p-4">
                   <p className="text-sm text-slate-500">
                     Masih dibutuhkan
                   </p>
@@ -170,14 +170,14 @@ function Landing() {
 
         {/* CTA */}
         <section className="px-6 pb-20">
-          <div className="mx-auto max-w-6xl rounded-3xl bg-emerald-700 px-6 py-12 text-center sm:px-12 sm:py-16">
+          <div className="mx-auto max-w-6xl bg-emerald-700 px-6 py-12 text-center sm:px-12 sm:py-16">
             <h2 className="text-3xl font-bold text-white">
               Satu langkah kecil menuju impianmu.
             </h2>
 
             <a
               href="/register"
-              className="mt-8 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-emerald-700 transition hover:bg-emerald-50"
+              className="mt-8 inline-block bg-white px-6 py-3 font-semibold text-emerald-700 transition hover:bg-emerald-50"
             >
               Buat Target Pertamamu →
             </a>
@@ -194,7 +194,7 @@ function Landing() {
 
 function FeatureCard({ icon, title, description }) {
   return (
-    <article className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg">
+    <article className="border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg">
       <span className="text-3xl">{icon}</span>
 
       <h3 className="mt-4 text-lg font-bold text-slate-900">

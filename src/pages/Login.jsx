@@ -50,11 +50,11 @@ function Login() {
   }
 
   const inputClass =
-    'mt-1 w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100'
+    'mt-1 w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100'
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-emerald-50 px-4 py-10">
-      <section className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
+      <section className="w-full max-w-md bg-white p-8 shadow-xl">
         <Link
           to="/"
           className="text-sm font-semibold text-emerald-700"
@@ -131,7 +131,7 @@ function Login() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-xl bg-emerald-600 px-4 py-3 font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full bg-emerald-600 px-4 py-3 font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting ? 'Memeriksa...' : 'Masuk'}
           </button>

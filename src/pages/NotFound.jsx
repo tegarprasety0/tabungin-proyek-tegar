@@ -15,7 +15,7 @@ function NotFound() {
 
       <Link
         to="/"
-        className="mt-6 rounded-lg bg-emerald-600 px-5 py-3 font-semibold text-white hover:bg-emerald-700"
+        className="mt-6 bg-emerald-600 px-5 py-3 font-semibold text-white hover:bg-emerald-700"
       >
         Kembali ke Beranda
       </Link>
