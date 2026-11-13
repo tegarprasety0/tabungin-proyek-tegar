@@ -82,7 +82,7 @@ function TransactionForm({
   }
 
   const inputClass =
-    'mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100'
+    'mt-2 w-full border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100'
 
   return (
     <form
@@ -166,7 +166,7 @@ function TransactionForm({
 
       {/* Error */}
       {errors.root && (
-        <p className="rounded-lg bg-red-50 p-3 text-sm text-red-600">
+        <p className="bg-red-50 p-3 text-sm text-red-600">
           {errors.root.message}
         </p>
       )}
@@ -177,7 +177,7 @@ function TransactionForm({
           type="button"
           onClick={onCancel}
           disabled={isSubmitting}
-          className="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50 disabled:opacity-50"
+          className="border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50 disabled:opacity-50"
         >
           Batal
         </button>
@@ -185,7 +185,7 @@ function TransactionForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
+          className="bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
         >
           {isSubmitting
             ? 'Menyimpan...'

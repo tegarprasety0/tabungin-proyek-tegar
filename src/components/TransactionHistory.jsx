@@ -19,7 +19,7 @@ function TransactionHistory({
 
   if (transactions.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+      <div className="border border-dashed border-slate-300 bg-white p-8 text-center">
         <p className="text-3xl">💰</p>
 
         <h3 className="mt-3 font-semibold text-slate-800">
@@ -34,7 +34,7 @@ function TransactionHistory({
   }
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
+    <div className="overflow-hidden border border-slate-100 bg-white shadow-sm">
       <div className="divide-y divide-slate-100">
         {transactions.map((transaction) => {
           const isDeposit = transaction.type === 'deposit'
@@ -47,7 +47,7 @@ function TransactionHistory({
               {/* Informasi transaksi */}
               <div className="flex items-start gap-4">
                 <div
-                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg ${
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center text-lg ${
                     isDeposit
                       ? 'bg-emerald-50 text-emerald-600'
                       : 'bg-red-50 text-red-600'
@@ -94,7 +94,7 @@ function TransactionHistory({
                   <button
                     type="button"
                     onClick={() => onEdit(transaction)}
-                    className="rounded-lg border border-emerald-200 px-3 py-2 text-xs font-semibold text-emerald-700 hover:bg-emerald-50"
+                    className="border border-emerald-200 px-3 py-2 text-xs font-semibold text-emerald-700 hover:bg-emerald-50"
                   >
                     Edit
                   </button>
@@ -102,7 +102,7 @@ function TransactionHistory({
                   <button
                     type="button"
                     onClick={() => onDelete(transaction)}
-                    className="rounded-lg border border-red-200 px-3 py-2 text-xs font-semibold text-red-600 hover:bg-red-50"
+                    className="border border-red-200 px-3 py-2 text-xs font-semibold text-red-600 hover:bg-red-50"
                   >
                     Hapus
                   </button>
