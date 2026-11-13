@@ -9,6 +9,8 @@ import GoalForm from '../components/GoalForm'
 import TransactionForm from '../components/TransactionForm'
 import TransactionHistory from '../components/TransactionHistory'
 
+import { Link } from 'react-router-dom'
+
 function Dashboard() {
   const { user } = useAuth()
 
@@ -318,18 +320,27 @@ function Dashboard() {
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={handleAdd}
-            className="rounded-xl bg-emerald-600 px-5 py-3 font-semibold text-white transition hover:bg-emerald-700"
-          >
-            + Buat Target
-          </button>
+            <div className="flex gap-3">
+              <Link
+                to="/"
+                className="border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:bg-slate-100"
+              >
+                ← Beranda
+              </Link>
+            
+              <button
+                type="button"
+                onClick={handleAdd}
+                className="bg-emerald-600 px-5 py-3 font-semibold text-white transition hover:bg-emerald-700"
+              >
+                + Buat Target
+              </button>
+            </div>
         </section>
 
         {/* Ringkasan */}
         <section className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+          <div className="border border-slate-100 bg-white p-6 shadow-sm">
             <p className="text-sm text-slate-500">
               Total Target Tabungan
             </p>
@@ -343,7 +354,7 @@ function Dashboard() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+          <div className="border border-slate-100 bg-white p-6 shadow-sm">
             <p className="text-sm text-slate-500">
               Kategori Tersedia
             </p>
@@ -372,7 +383,7 @@ function Dashboard() {
 
           {/* Loading */}
           {loading && (
-            <div className="rounded-2xl bg-white p-10 text-center">
+            <div className="bg-white p-10 text-center">
               <p className="text-slate-500">
                 Memuat data tabungan...
               </p>
@@ -381,7 +392,7 @@ function Dashboard() {
 
           {/* Error */}
           {!loading && error && (
-            <div className="rounded-2xl border border-red-100 bg-red-50 p-6">
+            <div className="border border-red-100 bg-red-50 p-6">
               <p className="font-medium text-red-600">
                 {error}
               </p>
@@ -398,7 +409,7 @@ function Dashboard() {
 
           {/* Empty state */}
           {!loading && !error && goals.length === 0 && (
-            <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-14 text-center">
+            <div className="border border-dashed border-slate-300 bg-white px-6 py-14 text-center">
 
               <h3 className="mt-4 text-lg font-bold text-slate-800">
                 Belum Ada Target Tabungan
@@ -412,7 +423,7 @@ function Dashboard() {
               <button
                 type="button"
                 onClick={handleAdd}
-                className="mt-5 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700"
+                className="mt-5 bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700"
               >
                 Buat Target Pertama
               </button>
@@ -462,7 +473,7 @@ function Dashboard() {
       {/* Modal Form */}
       {showForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-900/50 p-4">
-          <div className="my-auto w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
+          <div className="my-auto w-full max-w-lg bg-white p-6 shadow-xl">
             <div className="mb-6">
               <h2 className="text-xl font-bold text-slate-900">
                 {editingGoal
@@ -491,7 +502,7 @@ function Dashboard() {
     {/* Modal Form Transaksi */}
       {showTransactionForm && selectedGoal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-900/50 p-4">
-          <div className="my-auto w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
+          <div className="my-auto w-full max-w-lg bg-white p-6 shadow-xl">
             <div className="mb-6">
               <h2 className="text-xl font-bold text-slate-900">
                 {editingTransaction
