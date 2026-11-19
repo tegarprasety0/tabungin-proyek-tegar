@@ -53,8 +53,8 @@ function Login() {
     'mt-1 w-full border border-slate-300 px-4 py-3 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100'
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-emerald-50 px-4 py-10">
-      <section className="w-full max-w-md bg-white p-8 shadow-xl">
+    <main className="tabungin-background flex min-h-screen items-center justify-center px-4 py-6 sm:py-10">
+      <section className="w-full max-w-md border-2 border-emerald-300 bg-white p-5 shadow-2xl sm:p-8">
         <Link
           to="/"
           className="text-sm font-semibold text-emerald-700"
@@ -62,7 +62,7 @@ function Login() {
           ← Kembali ke Tabungin
         </Link>
 
-        <h1 className="mt-6 text-3xl font-bold text-slate-900">
+        <h1 className="mt-5 text-2xl font-bold text-slate-900 sm:mt-6 sm:text-3xl">
           Selamat datang kembali
         </h1>
 
@@ -72,7 +72,7 @@ function Login() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mt-8 space-y-5"
+          className="mt-6 space-y-5 sm:mt-8"
         >
           <div>
             <label
