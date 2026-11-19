@@ -99,12 +99,17 @@ function Login() {
           </div>
 
           <div>
-            <label
-              htmlFor="password"
-              className="text-sm font-medium text-slate-700"
-            >
-              Password
-            </label>
+            <div className="flex items-center justify-between gap-3">
+              <label
+                htmlFor="password"
+                className="text-sm font-medium text-slate-700"
+              >
+                Password
+              </label>
+              <Link to="/forgot-password" className="text-sm font-semibold text-emerald-700 hover:text-emerald-900 hover:underline">
+                Lupa sandi?
+              </Link>
+            </div>
 
             <input
               id="password"
