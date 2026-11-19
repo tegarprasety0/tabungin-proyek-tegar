@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/AuthContext'
 import { supabase } from '../lib/supabaseClient'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   const { user, loading } = useAuth()
@@ -18,22 +19,16 @@ function Navbar() {
   }
 
   return (
-    <header className="border-b border-emerald-100 bg-white">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2">
-          {/* <span className="flex h-10 w-10 items-center justify-center bg-emerald-600 text-xl text-white">
-            t
-          </span> */}
-
-          <span className="text-xl font-bold text-emerald-800">
-            Tabungin
-          </span>
+    <header className="bg-transparent">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
+        <Link to="/" aria-label="Tabungin — beranda" className="flex shrink-0 items-center drop-shadow-black">
+          <img src={logo} alt="Tabungin" className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-5">
+        <div className="flex items-center gap-2 sm:gap-5">
           <a
             href="/#fitur"
-            className="hidden text-sm font-medium text-slate-600 hover:text-emerald-700 sm:block"
+            className="hidden text-sm font-semibold text-slate-800 hover:text-emerald-700 sm:block"
           >
             Fitur
           </a>
@@ -46,7 +41,7 @@ function Navbar() {
             <>
               <Link
                 to="/dashboard"
-                className="text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+                className="border border-emerald-700 bg-emerald-700 px-3 py-2 text-xs font-bold text-white hover:bg-emerald-800 sm:px-4 sm:text-sm"
               >
                 Dashboard
               </Link>
@@ -54,7 +49,7 @@ function Navbar() {
               <button
                 type="button"
                 onClick={handleLogout}
-                className="border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="border border-slate-800 bg-slate-800 px-3 py-2 text-xs font-semibold text-white hover:bg-slate-700 sm:px-4 sm:text-sm"
               >
                 Keluar
               </button>
@@ -63,14 +58,14 @@ function Navbar() {
             <>
               <Link
                 to="/login"
-                className="border border-emerald-200 px-4 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50"
+                className="border border-emerald-700 bg-white px-3 py-2 text-xs font-bold text-emerald-800 hover:bg-emerald-50 sm:px-4 sm:text-sm"
               >
                 Masuk
               </Link>
 
               <Link
                 to="/register"
-                className="bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+                className="border border-emerald-600 bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700 sm:px-4 sm:text-sm"
               >
                 Daftar
               </Link>
