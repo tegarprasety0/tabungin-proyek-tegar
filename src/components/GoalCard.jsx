@@ -36,14 +36,14 @@ function GoalCard({
     : 'Tidak ditentukan'
 
   return (
-    <article className="border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+    <article className="border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md sm:p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className="inline-block bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
             {goal.categories?.name || 'Tanpa Kategori'}
           </span>
 
-          <h3 className="mt-3 text-lg font-bold text-slate-900">
+          <h3 className="mt-3 break-words text-lg font-bold text-slate-900">
             {goal.name}
           </h3>
 
@@ -73,17 +73,17 @@ function GoalCard({
         </div>
       </div>
 
-      <div className="mt-5 grid grid-cols-2 gap-4">
+      <div className="mt-5 grid grid-cols-2 gap-3 sm:gap-4">
         <div>
           <p className="text-xs text-slate-500">Terkumpul</p>
-          <p className="mt-1 text-sm font-bold text-emerald-700">
+          <p className="mt-1 break-words text-sm font-bold text-emerald-700">
             {formatter.format(currentAmount)}
           </p>
         </div>
 
         <div>
           <p className="text-xs text-slate-500">Target</p>
-          <p className="mt-1 text-sm font-bold text-slate-900">
+          <p className="mt-1 break-words text-sm font-bold text-slate-900">
             {formatter.format(targetAmount)}
           </p>
         </div>
@@ -105,11 +105,11 @@ function GoalCard({
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-3">
+      <div className="mt-5 grid grid-cols-2 gap-2 sm:gap-3">
         <button
           type="button"
           onClick={() => onAddTransaction(goal)}
-          className="w-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700"
+          className="col-span-2 border border-emerald-600 bg-emerald-600 px-3 py-3 text-sm font-semibold text-white hover:bg-emerald-700 sm:py-2.5"
         >
           + Catat Transaksi
         </button>
@@ -117,7 +117,7 @@ function GoalCard({
         <button
           type="button"
           onClick={() => onEdit(goal)}
-          className="flex-1 border border-emerald-200 px-4 py-2.5 text-sm font-semibold text-emerald-700 hover:bg-emerald-50"
+          className="border border-emerald-200 px-3 py-2.5 text-sm font-semibold text-emerald-700 hover:bg-emerald-50"
         >
           Edit
         </button>
@@ -125,7 +125,7 @@ function GoalCard({
         <button
           type="button"
           onClick={() => onDelete(goal)}
-          className="flex-1 border border-red-200 px-4 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50"
+          className="border border-red-200 px-3 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50"
         >
           Hapus
         </button>
