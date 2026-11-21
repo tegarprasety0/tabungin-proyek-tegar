@@ -31,7 +31,7 @@ function Login() {
   async function onSubmit(values) {
     setServerError('')
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email: values.email,
       password: values.password,
     })
@@ -43,8 +43,8 @@ function Login() {
       return
     }
 
-    const destination =
-      location.state?.from?.pathname || '/dashboard'
+    const destination = location.state?.from?.pathname
+      || (data.user?.app_metadata?.role === 'admin' ? '/admin' : '/dashboard')
 
     navigate(destination, { replace: true })
   }

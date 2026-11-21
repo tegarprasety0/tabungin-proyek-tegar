@@ -12,8 +12,10 @@ import NotFound from './pages/NotFound'
 import Dashboard from './pages/Dashboard'
 import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
+import Admin from './pages/Admin'
 
 import ProtectedRoute from './components/ProtectedRoute'
+import AdminRoute from './components/AdminRoute'
 import PublicOnlyRoute from './components/PublicOnlyRoute'
 import { AuthProvider } from './lib/AuthContext'
 
@@ -32,6 +34,10 @@ function App() {
           </Route>
 
           <Route path="/reset-password" element={<ResetPassword />} />
+
+          <Route element={<AdminRoute />}>
+            <Route path="/admin" element={<Admin />} />
+          </Route>
 
           {/* Halaman khusus pengguna yang sudah login */}
           <Route element={<ProtectedRoute />}>

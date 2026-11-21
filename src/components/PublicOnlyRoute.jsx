@@ -16,8 +16,8 @@ function PublicOnlyRoute() {
   }
 
   if (user) {
-    const destination =
-      location.state?.from?.pathname || '/dashboard'
+    const destination = location.state?.from?.pathname
+      || (user.app_metadata?.role === 'admin' ? '/admin' : '/dashboard')
 
     return <Navigate to={destination} replace />
   }
