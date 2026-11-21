@@ -49,6 +49,8 @@ export function AuthProvider({ children }) {
   const value = {
     session,
     user: session?.user ?? null,
+    role: session?.user?.app_metadata?.role === 'admin' ? 'admin' : 'user',
+    isAdmin: session?.user?.app_metadata?.role === 'admin',
     loading,
   }
 
