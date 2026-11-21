@@ -1,7 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/AuthContext'
 import { supabase } from '../lib/supabaseClient'
-import logo from '../assets/logo.png'
 
 function Navbar() {
   const { user, loading } = useAuth()
@@ -21,8 +20,8 @@ function Navbar() {
   return (
     <header className="bg-transparent">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
-        <Link to="/" aria-label="Tabungin — beranda" className="flex shrink-0 items-center drop-shadow-black">
-          <img src={logo} alt="Tabungin" className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
+        <Link to="/" aria-label="Tabungin — beranda" className="shrink-0 text-xl font-extrabold tracking-wide text-white sm:text-2xl">
+          TABUNGIN
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-5">
