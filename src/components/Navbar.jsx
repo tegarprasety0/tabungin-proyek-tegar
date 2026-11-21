@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <header className="bg-transparent">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
-        <Link to="/" aria-label="Tabungin — beranda" className="shrink-0 text-xl font-extrabold tracking-wide text-white sm:text-2xl">
+        <Link to="/" aria-label="Tabungin — beranda" className="shrink-0 text-xl font-extrabold tracking-wide text-emerald-800 sm:text-2xl sm:text-white">
           TABUNGIN
         </Link>
 
